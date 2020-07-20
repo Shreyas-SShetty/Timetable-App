@@ -1,0 +1,50 @@
+<androidx.cardview.widget.CardView
+
+    android:layout_height="wrap_content" android:layout_width="match_parent"
+    android:background="@color/colorAccent"
+    android:elevation="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="105dp"
+            android:id="@+id/ivMain"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvMain"
+            android:textStyle="bold"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/ivMain"
+            android:layout_marginLeft="6dp"
+            android:text="@string/tt"
+            android:textSize="24sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDescription"
+            android:layout_below="@id/tvMain"
+            android:layout_toRightOf="@id/ivMain"
+            android:layout_marginLeft="6dp"
+            android:text="@string/ct"
+            android:textSize="16sp"
+            />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/tvClick"
+           android:textSize="12sp"
+           android:layout_below="@id/tvDescription"
+           android:text="@string/dt"
+           android:layout_alignBottom="@id/ivMain"
+           android:layout_alignParentRight="true"
+           android:layout_marginTop="6dp"
+           />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
