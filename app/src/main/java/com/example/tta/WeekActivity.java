@@ -41,6 +41,10 @@ public class WeekActivity extends AppCompatActivity {
     private void setupUIViews() {
         toolbar = (Toolbar)findViewById(R.id.ToolbarWeek);
         listview = (ListView)findViewById(R.id.lvWeek);
+        //Mode private allows sharing within this application only
+        // Instead of creating separate template for all days
+        // make use of shared preferences to pass that day's data
+        // to a common template for all days.
         sharedPreferences = getSharedPreferences("MY_DAY", MODE_PRIVATE);
     }
 
@@ -49,6 +53,7 @@ public class WeekActivity extends AppCompatActivity {
         if(getSupportActionBar() != null) {
             getSupportActionBar().setTitle("Week");
         }
+        // Displays a back arrow to go to previous page.
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
     }
 
@@ -99,6 +104,8 @@ public class WeekActivity extends AppCompatActivity {
     public class WeekAdapter extends ArrayAdapter {
 
         private int resource;
+        // WeekAdapter acts as an interface to implement ListView
+        // LayoutInflator is used in case of nested view, in this case CardView
         private LayoutInflater layoutInflater;
         private String[] week = new String[]{};
 
@@ -109,6 +116,7 @@ public class WeekActivity extends AppCompatActivity {
             layoutInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
 
+        //Inbuilt function in WeekAdaptor
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
             ViewHolder holder;
@@ -133,7 +141,7 @@ public class WeekActivity extends AppCompatActivity {
             private TextView tvWeek;
         }
     }
-
+//To go back to previous page(in this case main page)
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
             case android.R.id.home : {

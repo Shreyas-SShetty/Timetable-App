@@ -42,6 +42,7 @@ public class FacultyActivity extends AppCompatActivity {
     private void setupUIViews() {
         toolbar = (Toolbar) findViewById(R.id.ToolbarFaculty);
         listView = (ListView)findViewById(R.id.lvFaculty);
+        // name of the sharedPreference is the name given to it in the folder
         sharedPreferences = getSharedPreferences("myFaculty", MODE_PRIVATE);
     }
 

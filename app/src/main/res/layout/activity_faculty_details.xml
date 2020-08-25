@@ -171,7 +171,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:text="Some palace"
+                android:text="Some place"
                 android:textSize="20sp" />
 
         </RelativeLayout>
